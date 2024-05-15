@@ -80,6 +80,9 @@ body {
     padding: 0 16px;
     margin: 0 auto;
   }
+  .mobile-menu {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -516,50 +519,48 @@ body {
   fill: var(--navy-blue);
 }
 
-.mobile-menu-list-link{
+.mobile-menu-list-link {
   display: block;
-font-weight: 700;
-font-size: 36px;
-line-height: 111%;
-letter-spacing: 0.02em;
-color: var(--navy-blue);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111%;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
 }
 
-.mobile-menu-list-item:not(:last-child){
+.mobile-menu-list-item:not(:last-child) {
   padding-bottom: 40px;
 }
 
-
-
-.mobile-menu-list-navigation{
+.mobile-menu-list-navigation {
   padding-bottom: 96px;
 }
 
-.mobile-menu-list-contact-link{
-font-weight: 500;
-font-size: 20px;
-line-height: 120%;
-letter-spacing: 0.02em;
-color: var(--slate);
-font-style:normal
+.mobile-menu-list-contact-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+  font-style: normal;
 }
 
-.navigation-mob-menu-blue{
+.navigation-mob-menu-blue {
   color: var(--ocean);
 }
 
-.mobile-menu-list-contact-details-item:not(:last-child){
+.mobile-menu-list-contact-details-item:not(:last-child) {
   padding-bottom: 24px;
 }
 
-.mobile-menu-list-social-networks{
+.mobile-menu-list-social-networks {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 48px;
-  gap:40px;
+  gap: 40px;
 }
-.mobile-menu-social-networks-link{
+.mobile-menu-social-networks-link {
   background-color: #4d5ae5;
   border-radius: 50%;
   width: 40px;
@@ -569,13 +570,7 @@ font-style:normal
   align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: white;
-
 }
-
-
-
-
-
 
 /* ============ HERO STYLES ============ */
 
@@ -1074,6 +1069,13 @@ font-style:normal
   padding-bottom: 96px;
 }
 
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  text-align: center;
+}
+
 .footer-logo {
   font-family: 'Ralevay', sans-serif;
   font-weight: 700;
@@ -1097,7 +1099,6 @@ font-style:normal
   letter-spacing: 0.02em;
   color: var(--cloud);
   text-align: left;
-  padding-bottom: 72px;
 }
 
 .social-page {
@@ -1113,7 +1114,6 @@ font-style:normal
   display: flex;
   gap: 16px;
   justify-content: center;
-  padding-bottom: 72px;
 }
 .social-media-link {
   width: 100%;
@@ -1206,16 +1206,67 @@ input[type='email']::placeholder {
 @media screen and (min-width: 768px) {
   .footer-logo {
     text-align: left;
-    padding-left: 92px;
+    padding-left: 0;
   }
   .p-in-footer {
     text-align: left;
-    margin-left: 92px;
+    margin-left: 0;
     width: 264px;
   }
-  .social-media-menu {
-    display: flex;
+
+  .social-media {
+    padding-top: 96px;
+    padding-left: 24px;
   }
 
-  /* HAVE TO CONTINUE */
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+    padding-left: 108px;
+    text-align: left;
+  }
+  .footer-form-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width:1158px){
+  .footer-container{
+    align-items: baseline;
+    padding-left: 0;
+    flex-wrap:nowrap;
+    gap:0;
+    padding-left: 16px;
+  }
+  .footer-form-container{
+    padding-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .social-media{
+     padding-right: 80px;
+     padding-left: 0;
+  }
+  .footer-for-text-container{
+    padding-right: 120px;
+  }
+  .footer-subscribe-button{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .footer-mail-input{
+    width: 264px;
+    padding-left: 16px;
+  }
 }
